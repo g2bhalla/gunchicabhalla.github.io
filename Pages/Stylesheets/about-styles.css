@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: url(images/Me.jpg); /* Use the 'me.jpg' image as the background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* Main content to fill the screen above the header */
+.main-content {
+    flex: 1; /* Takes up remaining space, pushing the header down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Text color on the landing page */
+}
+
+.main-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* Header at the bottom, moves with content */
+header {
+    width: 100%;
+    background-color: #9ba59c; /* Sage color */
+    padding: 10px 0;
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #5C4033; /* Maroon hover color */
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+}
+.greeting{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: typing 5s forwards;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
